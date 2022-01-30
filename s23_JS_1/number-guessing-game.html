@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Number Guessing Game</title>
+
+    </head>
+    <link rel="stylesheet" href="nggstyle.css">
+    <script src="logic.js" defer></script>
+    <body>
+        <div class="default">
+            <h2>Number guessing game</h2>
+            <p>
+                We have selected a random number between 1 and 100. See if you<br>
+                can guess it in 10 turns or fewer. We'll tell you if your guess was too<br>
+                high or too low.
+            </p>
+            <!-- for attribute for labels corresponds to the id attribute for the input element (guessfield)-->
+            <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+            <input type="submit" value="Submit guess" class="guessSubmit">
+        </div>
+        <div class="resultParas">
+            <p class="guesses"></p>
+            <p class="lastResult"></p>
+            <p class="lowOrHi"></p>
+        </div>
+          
+
+    </body>
+</html>

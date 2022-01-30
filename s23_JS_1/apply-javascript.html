@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Apply JavaScript example</title>
+
+    <script src="script.js" defer>
+        /*
+        need async or defer because it runs the script
+        (can only work for external scripts)
+        after the whole HTML code is parsed 
+        this means the button is created and the code works
+
+        use async scripts should be run immediately and they dont
+        have any dependencies
+        use defer to load the content in order of the page 
+        - wont run until the page is all loaded
+        - useful if your script modifies the elements
+
+        both allow the page to load while fetching the script 
+
+        without neither, the sciprt runs in the middle of the
+        code and the button is not created yet, so the code
+        doesn't run
+        
+        if placed after the body, async or defer are not needed
+        but this slows down the website as js and HTML aren't run
+        at simultaneaously
+
+        waits for the webapge to finihs loading before running js
+        does the same thing as defer
+
+        */
+        document.addEventListener('DOMContentLoaded', () => {});
+    </script>
+    
+  </head>
+  <body>
+    <button class='my-class'>Click me</button>
+  </body>
+</html>
